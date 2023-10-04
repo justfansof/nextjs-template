@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Eastern Petroleum</title>
+        <title>Next.js Toolbox</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="/dist/output.css" rel="stylesheet"></link>
       </Head>
