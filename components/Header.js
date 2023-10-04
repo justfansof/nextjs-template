@@ -1,26 +1,21 @@
-export default function Header({ title }) {
+export default function Header() {
   return (
     <>
-      <h1 className="title underline">{title}</h1>
-      <p>
-        Hi 👋! This template gives you a{" "}
-        <a href="https://nextjs.org/">Next.js</a> app with the scaffolding for{" "}
-        <a href="https://www.netlify.com/products/functions/">
-          Netlify Functions
-        </a>
-        , <a href="https://www.netlify.com/products/forms/">Forms</a>, and{" "}
-        <a href="https://docs.netlify.com/routing/redirects/">Redirects</a>. Our
-        aim was to give you the code you would need to hit the ground running
-        with a few fun features.
-      </p>
-
-      <p>
-        You can find the code for this project on GitHub at{" "}
-        <a href="https://github.com/netlify-templates/nextjs-toolbox">
-          https://github.com/netlify-templates/nextjs-toolbox
-        </a>
-        ! Happy coding!
-      </p>
+      <header className="bg-white">
+        <nav className="mx-auto flex items-center justify-between" aria-label="Global">
+          <div className="header-left order-2 lg:order-1">
+            <img
+              src="https://placehold.co/600x400"
+            />
+          </div>
+          <div className="header-center order-4 lg:order-2">
+            <p>The hometown corner store, where we know you by name</p>
+          </div>
+          <div className="header-right order-1 lg:order-3">
+            <p>test</p>
+          </div>
+        </nav>
+      </header>
     </>
   );
 }
