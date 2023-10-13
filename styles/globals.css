@@ -14,15 +14,19 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  max-width:100%;
+}
+
 main {
-  padding: 2rem 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0 auto;
-  max-width: 60ch;
+  max-width: 100%;
 }
 
 hr {
   width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  white-space: pre-line;
 }
