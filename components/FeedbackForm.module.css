@@ -1,26 +1,25 @@
 .form {
-  margin: 40px 40px;
   min-width: 300px;
   width: 45%;
+  margin:0px auto;
 }
 
 .form-field {
   font-size: inherit;
   margin: 15px 0;
-  padding: 12px 20px;
+  padding: 12px 12px;
   width: 100%;
+  border-bottom:1px solid #EBEAE9;
 }
 
-.button {
-  background-color: teal;
-  border: 1px solid black;
-  color: white;
-  width: 50%;
+.message {
   font-size: inherit;
   margin: 15px 0;
-  padding: 12px 20px;
+  padding: 12px 12px;
   width: 100%;
+  border:1px solid #EBEAE9;
 }
+
 .hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

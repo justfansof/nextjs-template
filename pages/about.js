@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Button from "@components/Button";
+import Text from '@components/Text';
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -23,13 +24,23 @@ export default function About() {
         <Header />
         {/* Timeline - Needs to be adjusted for desktop */}
         <div className="timeline flex flex-col pb-8 items-center justify-between">
-          <div className="intro-image">
-            <img src="/assets/ShellEPMart.png" alt="Black & White photograph of the outside of Eastern Petroleum" />
+          <div className="intro-image w-screen">
+            <img 
+              src="/assets/ShellEPMart.png" 
+              alt="Black & White photograph of the outside of Eastern Petroleum"
+              className="md:hidden"
+            />
+            <img 
+              src="/assets/EPMartBWLarge.png" 
+              alt="Black & White photograph of the outside of Eastern Petroleum"
+              className="hidden md:block w-screen"
+            />
+
           </div>
 
           <Timeline position="alternate" className="py-12">
             <TimelineItem>
-              <TimelineOppositeContent>
+              <TimelineOppositeContent className="justify-end md:flex">
                 <img 
                   src="../assets/Retro-Gas-Pump.jpg"
                   alt="Gas Pump Image"
@@ -37,31 +48,53 @@ export default function About() {
                 />
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot className="bg-red" />
+                <TimelineDot className="bg-red my-0 p-2" />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <h1 className="text-xxl font-black">1960</h1>
-                <h4 className="text-base font-black">Humble Beginnings</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero.</p>
+                <Text 
+                  type="h2" 
+                  text={"1960"}  
+                />
+                <Text 
+                  type="h5"
+                  text="Humble Beginnings"
+                />
+                <Text 
+                  type="p" 
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero. Mauris ac scelerisque dolor. Vivamus sed odio ac metus ornare ornare. Nullam pellentesque augue vel elit tempus ultricies. Ut id purus purus."
+                />
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
               <TimelineOppositeContent>
-                xxxxx
+                <img 
+                  src="/assets/ShellEPMart-Square.png" 
+                  alt="Black & White photograph of the outside of Eastern Petroleum"
+                  className="rounded-3xl"
+                />
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot className="bg-red" />
+                <TimelineDot className="bg-red my-0 p-2" />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <h1 className="text-xxl font-black">1980</h1>
-                <h4 className="text-base font-black">Growth in the Carolina's</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero.</p>
+                <Text 
+                  type="h2" 
+                  text={"1980"}  
+                />
+                <Text 
+                  type="h5"
+                  text="Growth in the Carolina's"
+                />                
+                <Text 
+                  type="p" 
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero. Mauris ac scelerisque dolor. Vivamus sed odio ac metus ornare ornare. Nullam pellentesque augue vel elit tempus ultricies. Ut id purus purus."
+                />
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-              <TimelineOppositeContent>
+              <TimelineOppositeContent className="justify-end md:flex">
                 <img
                   src="../assets/EP-Mart-Penny-the-Penguin.jpg"
                   alt="Penny the Penguin"
@@ -69,13 +102,22 @@ export default function About() {
                 />
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot className="bg-red" />
+                <TimelineDot className="bg-red my-0 p-2" />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <h1 className="text-xxl font-black">1990</h1>
-                <h4 className="text-base font-black">Penny the Penguin</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero.</p>
+                <Text 
+                  type="h2" 
+                  text={"1990"}  
+                />
+                <Text 
+                  type="h5"
+                  text="Penny the Penguin"
+                />
+                <Text 
+                  type="p" 
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero. Mauris ac scelerisque dolor. Vivamus sed odio ac metus ornare ornare. Nullam pellentesque augue vel elit tempus ultricies. Ut id purus purus."
+                />
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
@@ -87,27 +129,49 @@ export default function About() {
                 />
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot className="bg-red" />
+                <TimelineDot className="bg-red my-0 p-2" />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <h1 className="text-xxl font-black">2000</h1>
-                <h4 className="text-base font-black">Tanker Very Much</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero.</p>
+                <Text 
+                  type="h2" 
+                  text={"2000"}  
+                />
+                <Text 
+                  type="h5"
+                  text="Tanker Very Much"
+                />
+                <Text 
+                  type="p" 
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero. Mauris ac scelerisque dolor. Vivamus sed odio ac metus ornare ornare. Nullam pellentesque augue vel elit tempus ultricies. Ut id purus purus."
+                />
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-              <TimelineOppositeContent>
-                xxxxx
+              <TimelineOppositeContent className="justify-end md:flex">
+                <img 
+                  src="/assets/EPMartOutsideBlack.png" 
+                  alt="Photograph of the outside of EPMart"
+                  className="rounded-3xl"
+                />
               </TimelineOppositeContent>
               <TimelineSeparator>
-                <TimelineDot className="bg-red" />
+                <TimelineDot className="bg-red my-0 p-2" />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <h1 className="text-xxl font-black">2022</h1>
-                <h4 className="text-base font-black">Lookin' Good</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero.</p>
+                <Text 
+                  type="h2" 
+                  text={"2022"}  
+                />
+                <Text 
+                  type="h5"
+                  text="Lookin' Good"
+                />
+                <Text 
+                  type="p" 
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ipsum lorem. Vivamus quis ullamcorper tellus, et rhoncus augue. Donec sit amet odio gravida, congue ex et, pellentesque libero. Mauris ac scelerisque dolor. Vivamus sed odio ac metus ornare ornare. Nullam pellentesque augue vel elit tempus ultricies. Ut id purus purus."
+                />
               </TimelineContent>
             </TimelineItem>
           </Timeline>

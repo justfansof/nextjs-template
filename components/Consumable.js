@@ -1,3 +1,5 @@
+import Text from '@components/Text'
+
 export default function Consumable(props) {
   return (
     <>
@@ -7,7 +9,10 @@ export default function Consumable(props) {
             src={props.src} 
             alt={props.alt}
           />
-          <h4 className="text-lg font-black text-center">{props.title}</h4>
+          <Text 
+            type="h4"
+            text={props.title}
+          />
         </a>
       </div>
     </>
